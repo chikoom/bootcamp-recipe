@@ -14,8 +14,14 @@ router.get('/recipes/:ingredient', (req, res) => {
     if (err) {
       console.log(`Error recieving recieps`)
       res.send(`Error recieving recieps`)
+    } else {
+      res.send(JSON.parse(data).results.map(recipe => ({
+        title:recipe.title||'',
+        thumbnail:recipe.thumbnail||'',
+        href:recipe.href||'',
+        ingredients:recipe.ingredients||[]
+      })))
     }
-    res.send(data)
   })
 })
 
