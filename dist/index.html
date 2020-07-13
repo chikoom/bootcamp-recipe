@@ -8,13 +8,13 @@
         type="image/png" 
         href="./assets/foodfav.png">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Eat Code</title>
+    <title>CODE EAT CODE</title>
   </head>
   <body>
     <div id="root-container">
       <header>
         <img id="logo" src="./assets/foodfav.png">
-        <h1>EAT CODE</h1>
+        <h1>CODE EAT CODE</h1>
         <h2>simple recipes app</h2>
       </header>
       <nav>
@@ -31,6 +31,7 @@
             <h3 class="recipe-title"><a href="{{href}}" target="_blank">{{title}}</a></h3>
             <img class="recipe-image" src="{{thumbnail}}">
           </div>
+          <h4 class="ingredients-header">Ingredients:</h4>
           <ul class="ingredient-list">
             {{#each ingredients}}
             <li class="ingredient-single">{{this}}</li>

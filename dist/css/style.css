@@ -58,6 +58,13 @@ nav {
     width: 25vw;
     text-align: center;
     box-shadow: 1px 1px 5px #c6c6c6;
+    padding-bottom: 20px;
+    background-color: #fff;
+    transition: all .2s ease-in-out;
+}
+.recipe-container:hover {
+    transform: scale(1.05);
+    z-index: 9999;
 }
 .recipe-header{
     position: relative;
@@ -77,6 +84,14 @@ nav {
 }
 .recipe-image{
     width: 100%;
+}
+.ingredients-header{
+    width: 80%;
+    font-weight: 200;
+    margin: 10px auto;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #d1d1d1;
+    font-size: 17px;
 }
 .ingredient-single{
     display: inline-block;
@@ -106,4 +121,23 @@ nav {
     width: 100%;
     text-align: center;
     color: #d31313;
+}
+
+@media screen and (max-width: 799px) {
+    #results{
+        margin: 0 auto;
+        width: 90%;
+        position: relative;
+        display: block;
+        text-align: center;
+    }
+    .recipe-container{
+        width: 80vw;
+        text-align: center;
+        box-shadow: 1px 1px 5px #c6c6c6;
+        margin: 20px auto;
+    }
+    .recipe-title a{
+        font-size: 3vw;
+    }
 }
