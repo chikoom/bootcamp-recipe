@@ -11,7 +11,7 @@ header{
     padding-bottom: 30px;
 }
 header h1 {
-    font-weight: 900;
+    font-weight: 400;
 }
 header h2 {
     font-weight: 200;
@@ -143,7 +143,9 @@ nav {
         font-size: 3vw;
     }
 }
-
+.bold{
+    font-weight: 900;
+}
 @-webkit-keyframes breathing {
   0% {
     -webkit-transform: scale(0.9);
