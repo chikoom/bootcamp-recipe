@@ -27,9 +27,9 @@
       <div class="recipe-container">
         <h3><a href="{{href}}" target="_blank">{{title}}</a></h3>
         <img class="recipe-image" src="{{thumbnail}}">
-        <ul>
+        <ul class="ingredient-list">
           {{#each ingredients}}
-          <li>{{this}}</li>
+          <li class="ingredient-single">{{this}}</li>
           {{/each}}
         </ul>
       </div>

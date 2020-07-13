@@ -18,3 +18,7 @@ $('#btn-serach').on('click', function(){
     alert('Please enter ingredient')
   }
 })
+
+$('#results').on('click', '.recipe-image', function(){
+  console.log($(this).closest('.recipe-container').find('.ingredient-single').first().text())
+})
