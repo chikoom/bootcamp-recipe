@@ -22,6 +22,20 @@
     <div id="results"></div>
   </div>
 
+  <script id="search-results-template" type="text/x-handlebars-template">
+    {{#each data}}
+      <div class="recipe-container">
+        <h3><a href="{{href}}" target="_blank">{{title}}</a></h3>
+        <img class="recipe-image" src="{{thumbnail}}">
+        <ul>
+          {{#each ingredients}}
+          <li>{{this}}</li>
+          {{/each}}
+        </ul>
+      </div>
+    {{/each}}
+  </script>
+
   <script src="./handlebars/dist/handlebars.min.js"></script>
   <script src="./jquery/dist/jquery.min.js"></script>
   <script src="./scripts/main.js"  type="module"></script>
