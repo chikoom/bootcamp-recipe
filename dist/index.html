@@ -1,45 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" 
-      type="image/png" 
-      href="./assets/foodfav.png">
-  <link rel="stylesheet" href="./css/style.css">
-  <title>Eat Code</title>
-</head>
-<body>
-  <div id="root-container">
-    <header>
-      <h1>EAT CODE</h1>
-      <h2>simple recipes app</h2>
-    </header>
-    <nav>
-      <input id="input-ingredient" type="text" placeholder="Enter Ingredient">
-      <button id="btn-serach">SEARCH!</button>
-    </nav>
-    <div id="results"></div>
-  </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" 
+        type="image/png" 
+        href="./assets/foodfav.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Eat Code</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <header>
+        <img id="logo" src="./assets/foodfav.png">
+        <h1>EAT CODE</h1>
+        <h2>simple recipes app</h2>
+      </header>
+      <nav>
+        <input id="input-ingredient" type="text" placeholder="Enter Ingredient">
+        <button id="btn-search">SEARCH!</button>
+      </nav>
+      <div id="results"></div>
+    </div>
 
-  <script id="search-results-template" type="text/x-handlebars-template">
-    {{#each data}}
-      <div class="recipe-container">
-        <div class="recipe-header">
-          <h3 class="recipe-title"><a href="{{href}}" target="_blank">{{title}}</a></h3>
-          <img class="recipe-image" src="{{thumbnail}}">
+    <script id="search-results-template" type="text/x-handlebars-template">
+      {{#each data}}
+        <div class="recipe-container">
+          <div class="recipe-header">
+            <h3 class="recipe-title"><a href="{{href}}" target="_blank">{{title}}</a></h3>
+            <img class="recipe-image" src="{{thumbnail}}">
+          </div>
+          <ul class="ingredient-list">
+            {{#each ingredients}}
+            <li class="ingredient-single">{{this}}</li>
+            {{/each}}
+          </ul>
         </div>
-        <ul class="ingredient-list">
-          {{#each ingredients}}
-          <li class="ingredient-single">{{this}}</li>
-          {{/each}}
-        </ul>
-      </div>
-    {{/each}}
-  </script>
+      {{/each}}
+    </script>
 
-  <script src="./handlebars/dist/handlebars.min.js"></script>
-  <script src="./jquery/dist/jquery.min.js"></script>
-  <script src="./scripts/main.js"  type="module"></script>
-</body>
+    <script src="./handlebars/dist/handlebars.min.js"></script>
+    <script src="./jquery/dist/jquery.min.js"></script>
+    <script src="./scripts/main.js"  type="module"></script>
+  </body>
 </html>

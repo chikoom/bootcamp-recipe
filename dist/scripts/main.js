@@ -4,21 +4,16 @@ import { APIManager } from '../models/APIManager.js'
 const renderer = new Renderer()
 const apiManager = new APIManager()
 
-$('#btn-serach').on('click', function(){
+$('#btn-search').on('click', function() {
   const searchQuery = $('#input-ingredient').val()
-  if(searchQuery.length > 0){
+  if(searchQuery.length > 0) 
     apiManager.getRecipes(searchQuery).then( result => {
-      if(result.length === 0){
-        alert('No results')
-      } else {
-        renderer.renderResults(result)
-      }
+      renderer.renderResults(result)
     })
-  } else {
-    alert('Please enter ingredient')
-  }
+  else 
+    renderer.renderError(0)
 })
 
-$('#results').on('click', '.recipe-image', function(){
+$('#results').on('click', '.recipe-image', function() {
   console.log($(this).closest('.recipe-container').find('.ingredient-single').first().text())
 })
