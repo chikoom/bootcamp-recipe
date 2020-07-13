@@ -44,6 +44,7 @@ nav {
 }
 #results{
     margin: 0 auto;
+    padding-bottom: 50px;
     width: 80%;
     position: relative;
     display: grid;
@@ -82,7 +83,15 @@ nav {
     margin: 5px;
 }
 .ingredient-single:before{
-    content:'*'
+    font-family: "Font Awesome 5 Free";
+    content: "\f067";
+    display: inline-block;
+    padding-right: 5px;
+    vertical-align: 0px;
+    font-weight: 900;
+    font-size: 13px;
+    color:rgba(170,170,170,0.84);
+
 }
 .ingredient-list{
     text-align: justify;
